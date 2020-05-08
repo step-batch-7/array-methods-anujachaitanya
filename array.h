@@ -14,7 +14,7 @@ typedef int (*Reducer)(int, int);
 
 typedef struct
 {
-  int *array;
+  Int_ptr array;
   int length;
 } Array;
 

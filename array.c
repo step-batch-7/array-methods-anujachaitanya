@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include "array.h"
 
-Array_ptr map(Array_ptr array, Mapper mapper)
+Array_ptr map(Array_ptr src, Mapper mapper)
 {
-  int result[array->length];
-  for (size_t i = 0; i < array->length; i++)
+  int result[src->length];
+  for (size_t i = 0; i < src->length; i++)
   {
-    int map_result = (*mapper)(array->array[i]);
+    int map_result = (*mapper)(src->array[i]);
     result[i] = map_result;
   }
-  Array_ptr result_array = init_array(result, array->length);
+  Array_ptr result_array = init_array(result, src->length);
   return result_array;
 }
 
