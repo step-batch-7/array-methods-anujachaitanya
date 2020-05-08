@@ -1,11 +1,13 @@
 #ifndef __ARRAY_H
 #define __ARRAY_H
+
 typedef enum
 {
   False,
   True
 } Bool;
 
+typedef int *Int_ptr;
 typedef int (*Mapper)(int);
 typedef Bool (*Predicate)(int);
 typedef int (*Reducer)(int, int);
@@ -15,6 +17,8 @@ typedef struct
   int *array;
   int length;
 } Array;
+
+Array *init_array(Int_ptr array, int length);
 
 Array *map(Array *src, Mapper mapper);
 Array *filter(Array *src, Predicate predicate);
