@@ -1,5 +1,6 @@
 #include "assert.h"
 #include <stdio.h>
+
 void show_result(Bool result, char *description)
 {
   if (result)
@@ -11,6 +12,11 @@ void show_result(Bool result, char *description)
     printf("%s", FAILED);
   }
   printf("%s\n", description);
+}
+
+Bool assert_int(int actual, int expected)
+{
+  return actual == expected;
 }
 
 Bool assert_array(Array_ptr actual, Array_ptr expected)
