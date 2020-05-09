@@ -11,6 +11,7 @@ int square(number)
 {
   return number * number;
 }
+
 void test_map_for_empty_array(void)
 {
   char description[] = "Should map empty array";
