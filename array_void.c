@@ -67,3 +67,12 @@ ArrayVoid_ptr filter_void(ArrayVoid_ptr src, PredicateVoid predicate)
   }
   return resize_array(result);
 }
+
+Object reduce_void(ArrayVoid_ptr src, Object init, ReducerVoid reducer)
+{
+  for (size_t i = 0; i < src->length; i++)
+  {
+    init = (*reducer)(init, src->array[i]);
+  }
+  return init;
+}
