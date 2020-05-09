@@ -21,6 +21,7 @@ void displayer(Object number)
 {
   printf("%d", *(int *)number);
 }
+
 int main(void)
 {
   int a[] = {1, 2, 3, 4};
