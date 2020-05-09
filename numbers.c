@@ -22,6 +22,11 @@ void displayer(Object number)
   printf("%d", *(int *)number);
 }
 
+Bool int_is_even(Object num)
+{
+  return *(int *)num % 2 == 0;
+}
+
 int main(void)
 {
   int a[] = {1, 2, 3, 4};
@@ -35,6 +40,7 @@ int main(void)
 
   // printf("%d", reduce(array, 0, add_to));
   ArrayVoid_ptr array = init_void_array(a, 4, 4);
-  display(array, displayer);
+  ArrayVoid_ptr filter_result = filter_void(array, int_is_even);
+  display(filter_result, displayer);
   return 0;
 }
