@@ -1,4 +1,17 @@
 #include "assert.h"
+#include <stdio.h>
+void show_result(Bool result, char *description)
+{
+  if (result)
+  {
+    printf("%s", PASS);
+  }
+  else
+  {
+    printf("%s", FAILED);
+  }
+  printf("%s\n", description);
+}
 
 Bool assert_array(Array_ptr actual, Array_ptr expected)
 {
