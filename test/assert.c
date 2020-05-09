@@ -28,6 +28,7 @@ Bool assert_array(Array_ptr actual, Array_ptr expected)
       result = False;
       break;
     }
+    counter++;
   }
   return result;
 }
