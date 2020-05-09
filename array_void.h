@@ -8,7 +8,7 @@ typedef void *Object;
 typedef Object (*MapperVoid)(Object);
 typedef Bool (*PredicateVoid)(Object);
 typedef Object (*ReducerVoid)(Object, Object);
-typedef int (*Displayer)(Object);
+typedef void (*Displayer)(Object);
 typedef struct
 {
   Object *array;

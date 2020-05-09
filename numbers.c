@@ -17,10 +17,9 @@ int add_to(int initial_value, int number)
   return initial_value + number;
 }
 
-int displayer(Object number)
+void displayer(Object number)
 {
   printf("%d", *(int *)number);
-  return 0;
 }
 int main(void)
 {
