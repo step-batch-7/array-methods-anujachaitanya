@@ -1,4 +1,5 @@
 #include "array.h"
+#include "array_void.h"
 #include <stdio.h>
 
 int increment(int number)
@@ -16,6 +17,11 @@ int add_to(int initial_value, int number)
   return initial_value + number;
 }
 
+int displayer(Object number)
+{
+  printf("%d", *(int *)number);
+  return 0;
+}
 int main(void)
 {
   int a[] = {1, 2, 3, 4};
@@ -28,5 +34,7 @@ int main(void)
   display_result(result_filter);
 
   printf("%d", reduce(array, 0, add_to));
+  ArrayVoid_ptr array = init_void_array(a, 4);
+  display(array, displayer);
   return 0;
 }
