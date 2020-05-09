@@ -17,7 +17,7 @@ typedef struct
 
 typedef ArrayVoid *ArrayVoid_ptr;
 
-ArrayVoid_ptr init_void_array(Object array, int length);
+ArrayVoid_ptr init_void_array(Object array, int length, int size);
 void display(ArrayVoid_ptr array, Displayer displayer);
 
 ArrayVoid_ptr map_void(ArrayVoid_ptr src, MapperVoid mapper);

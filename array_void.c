@@ -1,15 +1,16 @@
 #include "array_void.h"
 #include <stdio.h>
 
-ArrayVoid_ptr init_void_array(Object array, int length)
+ArrayVoid_ptr init_void_array(Object array, int length, int size)
 {
   ArrayVoid_ptr new_array = malloc(sizeof(ArrayVoid));
   new_array->array = malloc(sizeof(Object) * length);
+  new_array->length = 0;
+
   while (new_array->length < length)
   {
-    new_array->array[new_array->length] = &array[new_array->length];
+    new_array->array[new_array->length] = array + (new_array->length * size);
     new_array->length++;
-    printf("%d", new_array->length);
   }
   return new_array;
 };

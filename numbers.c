@@ -25,16 +25,16 @@ int displayer(Object number)
 int main(void)
 {
   int a[] = {1, 2, 3, 4};
-  Array_ptr array = init_array(a, sizeof(a) / sizeof(int));
+  // Array_ptr array = init_array(a, sizeof(a) / sizeof(int));
 
-  Array_ptr result_map = map(array, increment);
-  display_result(result_map);
+  // Array_ptr result_map = map(array, increment);
+  // display_result(result_map);
 
-  Array_ptr result_filter = filter(array, is_even);
-  display_result(result_filter);
+  // Array_ptr result_filter = filter(array, is_even);
+  // display_result(result_filter);
 
-  printf("%d", reduce(array, 0, add_to));
-  ArrayVoid_ptr array = init_void_array(a, 4);
+  // printf("%d", reduce(array, 0, add_to));
+  ArrayVoid_ptr array = init_void_array(a, 4, 4);
   display(array, displayer);
   return 0;
 }
